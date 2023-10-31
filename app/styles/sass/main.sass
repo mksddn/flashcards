@@ -1,0 +1,96 @@
+@mixin font($fname, $fstyle, $fweight, $furl)
+  @font-face
+    font-family: $fname
+    font-style: $fstyle
+    font-weight: $fweight
+    src: url($furl) format('woff2')
+
+@include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+@include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
+@include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
+@include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+:root
+  --dark: #2e2e2e
+  --light: #ffffff
+  --accent: #1666e8
+  --index: calc(1vw + 1vh)
+  --transition: 1s cubic-bezier(.2, .5, 0, 1)
+  --border-raduis: var(--index)
+
+*::selection
+  background: var(--accent)
+  color: #fff
+
+::placeholder
+  color: #666
+
+input, textarea
+  outline: none
+  &:focus:required:invalid
+    border-color: red
+  &:required:valid
+    border-color: green
+
+body
+  background-color: var(--light)
+  font-family: roboto-oh5, sans-serif
+  font-size: 18px
+  color: var(--dark)
+  line-height: 1.5
+  height: 100%
+  min-width: 320px
+  position: relative
+  overflow-x: hidden
+
+.app-container
+  margin: 3rem 0
+
+.cards-container,
+.menu-container
+  width: 100%
+  max-width: 1440px
+  margin: 0 auto
+  display: flex
+  // gap: var(--index)
+  justify-content: center
+  flex-wrap: wrap
+
+.menu-container
+  margin-bottom: 2rem
+
+.card-item
+  width: 100%
+  max-width: 400px
+  margin: var(--index)
+
+.card-side
+  // background-color: var(--accent)
+  box-shadow: 0 0 10px 1px #ccc
+  padding: 2rem
+  border-radius: var(--border-raduis)
+  color: var(--light)
+
+.card-content
+  text-align: center
+  line-height: 1.2
+
+.card-title
+  opacity: 0.2
+  margin-bottom: 1rem
+
+.flip-enter-active
+  transition: all var(--transition)
+
+.flip-enter-from,
+.flip-leave-to
+  transform: rotateY(180deg)
+  opacity: 0
+
+.flip-leave-active
+  display: none

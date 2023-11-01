@@ -1,0 +1,24 @@
+{
+  "cards": [
+    {
+      "frontText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, quaerat!",
+      "backText": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, numquam.",
+      "flipped": false
+    },
+    {
+      "frontText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, animi.",
+      "backText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, perspiciatis!",
+      "flipped": false
+    },
+    {
+      "frontText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, quaerat!",
+      "backText": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, numquam.",
+      "flipped": false
+    },
+    {
+      "frontText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, obcaecati!",
+      "backText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, ipsum?",
+      "flipped": false
+    }
+  ]
+}

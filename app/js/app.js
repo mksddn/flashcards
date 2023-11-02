@@ -3,13 +3,21 @@ document.addEventListener('DOMContentLoaded', () => {
 	Vue.createApp({
 		data: () => ({
 			cards: [],
-			itemRefs: []
+			itemRefs: [],
+			isLocalhost: false,
 		}),
 		async mounted() {
+			if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+				this.isLocalhost = true;
+			}
 			await fetch("js/db.json")
 				.then(res => res.json())
 				.then(data => this.cards = data.cards)
-			this.paintCards(this.$refs.items)
+			this.cards.forEach(card => {
+				card.flipped = false
+			});
+			this.cards.sort(() => Math.random() - 0.5);
+			this.paintCards(this.$refs.items);
 		},
 		methods: {
 			paintCards: (cards) => {
@@ -46,6 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			},
 			flipCard: function (card) {
 				card.flipped = !card.flipped;
+			},
+			addCard: () => {
+				console.log('test');
 			}
 		}
 	}).mount('#app');

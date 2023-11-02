@@ -79,10 +79,21 @@ body
 .card-content
   text-align: center
   line-height: 1.2
+  min-height: 250px
+  display: flex
+  flex-direction: column
+  justify-content: space-evenly
 
 .card-title
-  opacity: 0.2
   margin-bottom: 1rem
+  font-size: 2rem
+  span
+    opacity: 0.4
+    font-size: 1rem
+
+.card-text
+  font-weight: bold
+  font-size: 1.5rem
 
 .flip-enter-active
   transition: all var(--transition)

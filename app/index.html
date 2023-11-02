@@ -28,11 +28,13 @@
 					<div v-show="!card.flipped" @click="flipCard(card)" class="card-side">
 						<div class="card-content card-front">
 							<div class="card-title">
-								Вопрос
+								🤔
+								<br>
+								<span>Вопрос</span>
 							</div>
-							<h2>
+							<span class="card-text">
 								{{card.frontText}}
-							</h2>
+							</span>
 						</div>
 					</div>
 				</transition>
@@ -41,15 +43,24 @@
 					<div v-show="card.flipped" @click="flipCard(card)" class="card-side">
 						<div class="card-content card-back">
 							<div class="card-title">
-								Ответ
+								🧐
+								<br>
+								<span>Ответ</span>
 							</div>
-							<h2>
+							<span class="card-text">
 								{{card.backText}}
-							</h2>
+							</span>
 						</div>
 					</div>
 				</transition>
 			</div>
+		</div>
+		<div class="add-card" v-if="isLocalhost">
+			<form>
+				<input type="text" placeholder="Вопрос">
+				<input type="text" placeholder="Ответ">
+				<button type="submit" @click.stop="addCard">Добавить</button>
+			</form>
 		</div>
 	</div>
 

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>My Flashcards</title>
+	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/app.min.css">
+
+</head>
+
+<body>
+	<div id="app" class="app-container">
+		<div class="menu-container">
+			<h1>My Flashcards</h1>
+		</div>
+
+		<div class="cards-container">
+			<div v-for="card in cards" :key="card.index" ref="items" class="card-item">
+				<transition name="flip">
+					<div v-show="!card.flipped" @click="flipCard(card)" class="card-side">
+						<div class="card-content card-front">
+							<div class="card-title">
+								🇷🇺
+							</div>
+							<span class="card-text">
+								{{card.frontText}}
+							</span>
+						</div>
+					</div>
+				</transition>
+
+				<transition name="flip">
+					<div v-show="card.flipped" @click="flipCard(card)" class="card-side">
+						<div class="card-content card-back">
+							<div class="card-title">
+								🇺🇸
+							</div>
+							<span class="card-text">
+								{{card.backText}}
+							</span>
+						</div>
+					</div>
+				</transition>
+			</div>
+		</div>
+		<div class="add-card" v-if="isLocalhost">
+			<form>
+				<input type="text" placeholder="Вопрос">
+				<input type="text" placeholder="Ответ">
+				<button type="submit" @click.stop="addCard">Добавить</button>
+			</form>
+		</div>
+	</div>
+
+	<script src="js/vue.global.js"></script>
+	<script src="js/app.js"></script>
+
+</body>
+
+</html>

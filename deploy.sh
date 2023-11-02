@@ -12,7 +12,7 @@ git branch -m gh-pages
 set -e
 
 # сборка
-npm run generate
+gulp build
 
 
 # git init

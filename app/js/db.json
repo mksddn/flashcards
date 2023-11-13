@@ -126,7 +126,7 @@
     },
     {
       "frontText": "Мне ничего не приходит в голову",
-      "backText": "Nothing crosses my mind"
+      "backText": "Nothing crosses my mind / Not off the top of my head"
     },
     {
       "frontText": "Меня только что осенило",
@@ -190,7 +190,19 @@
     },
     {
       "frontText": "О, сорян, я увлекся и ушел от темы. На чем мы остановились?",
-      "backText": "Oh sorry, I got carried away and got off the subject. Where were we? "
+      "backText": "Oh sorry, I got carried away and got off the subject. Where were we?"
+    },
+    {
+      "frontText": "Эта новость ошеломила меня",
+      "backText": "The news stunned me"
+    },
+    {
+      "frontText": "По какой-то неясной причине",
+      "backText": "For some obscure reason"
+    },
+    {
+      "frontText": "Тщательно разработанный план всегда работает",
+      "backText": "An elaborated plan always works"
     }
   ]
 }

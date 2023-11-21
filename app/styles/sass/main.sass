@@ -48,11 +48,36 @@ body
   position: relative
   overflow-x: hidden
 
+form
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  gap: 10px
+
+input,
+textarea,
+button
+  border: 1px solid
+  padding: 10px 15px
+  border-radius: var(--border-raduis)
+  font-family: roboto-oh5, sans-serif
+
+button
+  padding: 10px 20px
+  background-color: coral
+  color: #fff
+  cursor: pointer
+  transition: var(--transition)
+  &:hover
+    background-color: darken(coral, 10%)
+
 .app-container
   margin: 3rem 0
 
 .cards-container,
-.menu-container
+.title-container,
+.form-container
   width: 100%
   max-width: 1440px
   margin: 0 auto
@@ -61,7 +86,8 @@ body
   justify-content: center
   flex-wrap: wrap
 
-.menu-container
+.title-container,
+.form-container
   margin-bottom: 2rem
 
 .card-item
@@ -102,3 +128,58 @@ body
 
 .flip-leave-active
   display: none
+
+// MODAL
+.modal
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 1050
+  display: none
+  width: 100%
+  height: 100%
+  overflow: hidden
+  background-color: rgba(0, 0, 0, .5)
+  animation-name: fade
+  animation-duration: 0.3s
+
+.modal-dialog
+  max-width: 500px
+  margin: 40px auto
+  padding: 0 20px
+
+.modal-content
+  position: relative
+  width: 100%
+  padding: 40px
+  background-color: #fff
+  max-height: 80vh
+  overflow-y: auto
+  border-radius: var(--border-raduis)
+
+.modal-close
+  position: absolute
+  top: 5px
+  right: 20px
+  font-size: 30px
+  color: #000
+  opacity: .5
+  font-weight: 700
+  border: none
+  background-color: transparent
+  cursor: pointer
+
+.modal-input
+  display: block
+
+.modal-show
+  display: block
+
+.modal-hide
+  display: none
+
+@keyframes fade
+  from
+    opacity: 0.1
+  to
+    opacity: 1

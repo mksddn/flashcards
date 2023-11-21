@@ -18,8 +18,24 @@
 
 <body>
 	<div id="app" class="app-container">
-		<div class="menu-container">
+		<div class="title-container">
 			<h1>My Flashcards</h1>
+		</div>
+
+		<div class="form-container" v-if="isLocalhost">
+			<button data-modal>Добавить карточку</button>
+			<div class="modal">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<form action="#">
+							<div class="modal-close" data-close>&times;</div>
+							<textarea required type="text" placeholder="🇷🇺 Вопрос"></textarea>
+							<textarea required type="text" placeholder="🇺🇸 Ответ"></textarea>
+							<button type="submit" @click.stop="addCard">Добавить</button>
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<div class="cards-container">
@@ -51,17 +67,11 @@
 				</transition>
 			</div>
 		</div>
-		<div class="add-card" v-if="isLocalhost">
-			<form>
-				<input type="text" placeholder="Вопрос">
-				<input type="text" placeholder="Ответ">
-				<button type="submit" @click.stop="addCard">Добавить</button>
-			</form>
-		</div>
 	</div>
 
 	<script src="js/vue.global.js"></script>
 	<script src="js/app.js"></script>
+	<script src="js/modal.js"></script>
 
 </body>
 

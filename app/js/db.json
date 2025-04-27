@@ -69,7 +69,7 @@
       "backText": "We had better leave it as it is"
     },
     {
-      "frontText": "Пологаю, ты знаешь, почему я здесь",
+      "frontText": "Полагаю, ты знаешь, почему я здесь",
       "backText": "Reckon you know why I'm here"
     },
     {
@@ -203,6 +203,26 @@
     {
       "frontText": "Тщательно разработанный план всегда работает",
       "backText": "An elaborated plan always works"
+    },
+    {
+      "frontText": "И жили они долго и счастливо",
+      "backText": "And they lived happily ever after"
+    },
+    {
+      "frontText": "Ни при каких обстоятельствах ты не должен злиться и кричать на детей",
+      "backText": "Under no circumstances can you get mad and shout at the kids"
+    },
+    {
+      "frontText": "Позволю себе не согласиться",
+      "backText": "I beg to differ"
+    },
+    {
+      "frontText": "Чем больше он говорит, тем меньше его слушают",
+      "backText": "The more he speaks, the less he is listened to"
+    },
+    {
+      "frontText": "Не могли бы вы мне это прояснить?",
+      "backText": "Could you please clear it up for me?"
     }
   ]
 }

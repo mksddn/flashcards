@@ -6,12 +6,12 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title>My Flashcards</title>
+	<title>Do practice phrases!</title>
 	<meta name="description" content="Startup HTML template OptimizedHTML 5">
 
 	<meta name="viewport"
 		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link rel="icon" href="images/favicon.png">
+	<link rel="icon" href="images/favicon.jpg">
 	<link rel="stylesheet" href="css/app.min.css">
 
 </head>
@@ -19,11 +19,11 @@
 <body>
 	<div id="app" class="app-container">
 		<div class="title-container">
-			<h1>My Flashcards</h1>
+			<h1>Do practice phrases!</h1>
 		</div>
 
 		<div class="form-container" v-if="isLocalhost">
-			<button data-modal>Добавить карточку</button>
+			<button data-modal>Add a card</button>
 			<div class="modal">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -31,7 +31,7 @@
 							<div class="modal-close" data-close>&times;</div>
 							<textarea required type="text" placeholder="🇷🇺 Вопрос"></textarea>
 							<textarea required type="text" placeholder="🇺🇸 Ответ"></textarea>
-							<button type="submit" @click.stop="addCard">Добавить</button>
+							<button type="submit" @click.stop="addCard">Save</button>
 						</form>
 					</div>
 				</div>
